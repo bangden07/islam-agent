@@ -1,0 +1,28 @@
+<!--
+  PETUNJUK:
+  Setelah menjalankan `npx cap add android`, buka file:
+  android/app/src/main/AndroidManifest.xml
+
+  Pastikan permission berikut ada di dalam tag <manifest> (sebelum <application>):
+-->
+
+<!-- Akses internet untuk API calls (biasanya sudah ada default) -->
+<uses-permission android:name="android.permission.INTERNET" />
+
+<!-- Cek status koneksi jaringan -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<!-- Rekam audio untuk fitur voice input (speech-to-text) -->
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+<!-- Modifikasi audio settings saat recording -->
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+<!--
+  CATATAN PENTING:
+  1. INTERNET & ACCESS_NETWORK_STATE biasanya sudah otomatis ditambahkan Capacitor
+  2. RECORD_AUDIO adalah permission "dangerous" - Android akan meminta izin user saat runtime
+  3. Tidak perlu CAMERA, STORAGE, atau permission lain untuk aplikasi ini
+  4. Untuk production APK, pastikan minSdkVersion minimal 22 (Android 5.1+)
+     agar Web Speech API berfungsi dengan baik
+-->

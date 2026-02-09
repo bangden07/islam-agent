@@ -1,0 +1,31 @@
+# ── Dependencies ──
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ── Build output ──
+frontend/dist/
+frontend/android/
+backend/data/docs/*.pdf
+
+# ── Environment ──
+.env
+backend/.env
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Docker ──
+qdrant_data/
+
+# ── Logs ──
+*.log
